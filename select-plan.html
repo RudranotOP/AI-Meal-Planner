@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Select Meal Plan | Nutri Mind</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(270deg, #e0f7fa, #f1f8e9, #fff3e0);
+      background-size: 600% 600%;
+      animation: gradientBG 20s ease infinite;
+      color: #111;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    body.dark {
+      background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+      color: #f4f4f4;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .back-button {
+      background-color: #22c55e;
+      color: #fff;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #16a34a;
+    }
+
+    .toggle-dark {
+      font-size: 22px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-top: 10px;
+    }
+
+    p.description {
+      text-align: center;
+      max-width: 700px;
+      margin: 10px auto 30px;
+      font-size: 1.1rem;
+    }
+
+    h2.category-title {
+      margin: 40px 0 20px 30px;
+      font-size: 1.6rem;
+      color: #0ea5e9;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      padding: 0 30px;
+      margin-bottom: 50px;
+    }
+
+    .plan-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0, 170, 255, 0.2);
+    }
+
+    .plan-card h3 {
+      font-size: 1.2rem;
+      margin: 10px 0 8px;
+    }
+
+    .plan-card p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      min-height: 50px;
+    }
+
+    .plan-card button {
+      background-color: #0ea5e9;
+      color: #fff;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .plan-card button:hover {
+      background-color: #0284c7;
+    }
+
+    /* DARK MODE */
+    body.dark .plan-card {
+      background-color: #111827;
+      color: #f4f4f4;
+    }
+
+    body.dark .plan-card:hover {
+      box-shadow: 0 0 20px rgba(0, 170, 255, 0.3);
+    }
+
+    body.dark h2.category-title {
+      color: #67e8f9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="back-button" onclick="location.href='index.html'">← Home</button>
+    <button class="toggle-dark" id="darkToggle">🌙</button>
+  </div>
+
+  <!-- Heading -->
+  <h1>🍽️ Choose Your Meal Plan</h1>
+  <p class="description">Explore meal plans tailored to your lifestyle, health condition, or goals. Select one that suits you best and begin your transformation!</p>
+
+  <!-- Special Purpose Diets -->
+  <h2 class="category-title">🌿 Special Purpose Diets</h2>
+  <div class="plans-grid">
+    <div class="plan-card">
+      <h3>🥑 Keto Diet</h3>
+      <p>Low-carb, high-fat diet that helps with fat burning and energy balance.</p>
+      <button>Select Plan</button>
+    </div>
+    <div class="plan-card">
+      <h3>🍗 Paleo Diet</h3>
+      <p>Focuses on whole foods like lean meats, fish, fruits, vegetables, and nuts.</p>
+      <button>Select Plan</button>
+    </div>
+    <div class="plan-card">
+      <h3>🍅 Mediterranean Diet</h3>
+      <p>Plant-based meals with whole grains, olive oil, and healthy fats.</p>
+      <button>Select Plan</button>
+    </div>
+    <div class="plan-card">
+      <h3>🧘 Mental Wellness Diet</h3>
+      <p>Supports brain health and reduces stress with mood-boosting nutrients.</p>
+      <button>Select Plan</button>
+    </div>
+  </div>
+
+  <!-- Allergy-Friendly Plans -->
+  <h2 class="category-title">🌾 Allergy-Friendly Plans</h2>
+  <div class="plans-grid">
+    <div class="plan-card">
+      <h3>🚫 Gluten-Free</h3>
+      <p>Eliminates gluten to support gut health and improve digestion.</p>
+      <button>Select Plan</button>
+    </div>
+    <div class="plan-card">
+      <h3>🥛 Lactose-Free</h3>
+      <p>Excludes dairy for those with lactose intolerance or dairy sensitivities.</p>
+      <button>Select Plan</button>
+    </div>
+    <div class="plan-card">
+      <h3>🥜 Nut-Free</h3>
+      <p>Designed for people with nut allergies, using safe, healthy alternatives.</p>
+      <button>Select Plan</button>
+    </div>
+  </div>
+
+  <!-- Lifestyle / Ethical Plans -->
+  <h2 class="category-title">🌱 Lifestyle or Ethical Plans</h2>
+  <div class="plans-grid">
+    <div class="plan-card">
+      <h3>🥦 Vegetarian</h3>
+      <p>No meat, includes plant-based proteins like tofu, lentils, and eggs.</p>
+      <button>Select Plan</button>
+    </div>
+    <div class="plan-card">
+      <h3>🌽 Vegan</h3>
+      <p>Fully plant-based. No animal products or byproducts included.</p>
+      <button>Select Plan</button>
+    </div>
+    <div class="plan-card">
+      <h3>🍖 Non-Vegetarian</h3>
+      <p>Balanced meals with meat, poultry, fish, and plant foods.</p>
+      <button>Select Plan</button>
+    </div>
+    <div class="plan-card">
+      <h3>🥕 Flexitarian</h3>
+      <p>Mostly vegetarian but occasionally includes meat or fish.</p>
+      <button>Select Plan</button>
+    </div>
+    <div class="plan-card">
+      <h3>🐟 Pescatarian</h3>
+      <p>Vegetarian diet that includes seafood for added protein.</p>
+      <button>Select Plan</button>
+    </div>
+  </div>
+
+  <!-- Health Condition Based Plans -->
+  <h2 class="category-title">❤️ Health Condition-Based</h2>
+  <div class="plans-grid">
+    <div class="plan-card">
+      <h3>🩺 Diabetic-Friendly</h3>
+      <p>Regulates blood sugar with low-glycemic, high-fiber foods.</p>
+      <button>Select Plan</button>
+    </div>
+    <div class="plan-card">
+      <h3>💓 Heart-Healthy</h3>
+      <p>Rich in omega-3, fiber, and low in saturated fats and sodium.</p>
+      <button>Select Plan</button>
+    </div>
+    <div class="plan-card">
+      <h3>🧬 PCOS/Thyroid-Friendly</h3>
+      <p>Hormone-balancing meals to support metabolism and energy.</p>
+      <button>Select Plan</button>
+    </div>
+    <div class="plan-card">
+      <h3>🧃 Renal Diet</h3>
+      <p>Low-sodium, low-potassium meals to support kidney function.</p>
+      <button>Select Plan</button>
+    </div>
+  </div>
+
+  <!-- Goal-Oriented Plans -->
+  <h2 class="category-title">🎯 Goal-Oriented Plans</h2>
+  <div class="plans-grid">
+    <div class="plan-card">
+      <h3>⚖️ Weight Loss</h3>
+      <p>Calorie-controlled meals to promote gradual and healthy fat loss.</p>
+      <button>Select Plan</button>
+    </div>
+    <div class="plan-card">
+      <h3>📈 Weight Gain</h3>
+      <p>High-calorie, nutrient-dense foods for healthy weight gain.</p>
+      <button>Select Plan</button>
+    </div>
+    <div class="plan-card">
+      <h3>💪 Muscle Building</h3>
+      <p>Protein-rich meals to build lean muscle mass effectively.</p>
+      <button>Select Plan</button>
+    </div>
+    <div class="plan-card">
+      <h3>🏃 Athletic Performance</h3>
+      <p>Boosts endurance, stamina, and performance with complex carbs and proteins.</p>
+      <button>Select Plan</button>
+    </div>
+  </div>
+
+  <!-- Gym-Oriented -->
+  <h2 class="category-title">🏋️ Gym-Oriented Plans</h2>
+  <div class="plans-grid">
+    <div class="plan-card">
+      <h3>🔥 Pre Workout</h3>
+      <p>Meals to energize your workouts with healthy carbs and light proteins.</p>
+      <button>Select Plan</button>
+    </div>
+    <div class="plan-card">
+      <h3>🧊 Post Workout</h3>
+      <p>Protein-rich and recovery-focused meals to rebuild muscles and refuel.</p>
+      <button>Select Plan</button>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    const toggle = document.getElementById("darkToggle");
+    const body = document.body;
+
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('dark');
+    }
+
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      localStorage.setItem('darkMode', body.classList.contains('dark') ? 'enabled' : 'disabled');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,687 @@
+/* =======================
+   ✨ Global Styles – Animated Gradient
+======================= */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  color: #111;
+  background: linear-gradient(270deg, #e0f7fa, #f1f8e9, #fff3e0);
+  background-size: 600% 600%;
+  animation: gradientBG 20s ease infinite;
+  transition: background 0.3s, color 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* =======================
+   🌑 Dark Mode Overrides
+======================= */
+body.dark {
+  background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+  background-size: 600% 600%;
+  animation: gradientBG 20s ease infinite;
+  color: #f4f4f4;
+}
+
+body.dark .navbar {
+  background: #222;
+}
+
+body.dark .navbar a,
+body.dark .hero-content h1,
+body.dark .hero-content p,
+body.dark .section-title {
+  color: #f4f4f4;
+}
+
+body.dark .primary-btn {
+  background: #00aaff;
+  color: white;
+}
+
+body.dark .how-card {
+  background: #1e1e1e;
+  color: #eeeeee;
+  border: 1px solid #333;
+}
+
+/* =======================
+   🧭 Navbar
+======================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-right a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+.cta {
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta:hover {
+  background: #005fcc;
+}
+
+#dark-mode-toggle {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* =======================
+   🦸 Hero Section
+======================= */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 40px;
+  background: transparent;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px rgba(0, 200, 255, 0.4);
+}
+
+.hero-content p {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.primary-btn {
+  padding: 10px 20px;
+  background: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hero-image img {
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+/* =======================
+   📦 Features Section
+======================= */
+.features {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: transparent;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.feature-card {
+  background: #ffffff;
+  color: #222222;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.feature-card h3 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  color: var(--text-light);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+}
+
+body.dark .feature-card {
+  background: #222;
+  color: #f4f4f4;
+  border: 1px solid #333;
+}
+
+/* =======================
+   ⚙️ How It Works Section
+======================= */
+.how-icon {
+  font-size: 40px;
+  color: #00aaff;
+  margin-bottom: 12px;
+  animation: pulseIcon 1.8s infinite;
+}
+
+@keyframes pulseIcon {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+}
+
+.how-it-works {
+  background: transparent;
+  padding: 3rem 0;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.how-card {
+  background: #ffffff;
+  color: #222222;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s, color 0.3s;
+}
+
+.how-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+body.dark .how-card:hover {
+  background: #1e1e1e;
+  color: #eeeeee;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.08);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+body.dark .section-title {
+  color: #f4f4f4;
+}
+
+/* =======================
+   👤 Testimonials
+======================= */
+.testimonials,
+.about {
+  padding: 60px 20px;
+  text-align: center;
+  background: transparent;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background-color: #1e293b;
+  color: white;
+  border: 2px solid #334155;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.3);
+}
+
+body.dark-mode .testimonial-card {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  border: 2px solid #cbd5e1;
+}
+
+/* =======================
+   ℹ️ About Section
+======================= */
+.about-content {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* =======================
+   🍽️ Hero Image Animation
+======================= */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating-meal {
+  width: 350px;
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.floating-meal:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+/* =======================
+   🔐 Login/Register Modal
+======================= */
+.login-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.login-card {
+  background: #fff;
+  color: #111;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.login-card .primary-btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.login-card.dark-mode {
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+.login-card.dark-mode input {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+/* =======================
+   🌗 Toggle Buttons
+======================= */
+.dark-mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.dark-mode-toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+/* =======================
+   🔁 Modal Animations
+======================= */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOutDown {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(40px); }
+}
+
+.modal-animate-in {
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.modal-animate-out {
+  animation: fadeOutDown 0.3s ease forwards;
+}
+
+/* =======================
+   🎯 Form Switch Links
+======================= */
+.switch-form {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: var(--text-color, #000);
+}
+
+.switch-form button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* =======================
+   🧊 Glow Hover Effect
+======================= */
+.feature-card:hover,
+.how-card:hover {
+  background: radial-gradient(circle at center, rgba(0, 170, 255, 0.15), transparent 80%);
+  transform: translateY(-5px);
+  box-shadow:
+    0 0 10px rgba(0, 170, 255, 0.3),
+    0 0 20px rgba(0, 170, 255, 0.2);
+}
+
+body.dark .feature-card:hover,
+body.dark .how-card:hover {
+  background: radial-gradient(circle at center, rgba(0, 170, 255, 0.05), transparent 80%);
+  box-shadow:
+    0 0 15px rgba(0, 170, 255, 0.4),
+    0 0 25px rgba(0, 170, 255, 0.2);
+}
+
+/* =======================
+   🛠️ Utility
+======================= */
+.hidden {
+  display: none;
+}
+
+/* === Floating Background Icons === */
+.floating-icons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.icon {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.2;
+  animation: floatIcon 20s linear infinite;
+}
+
+.icon1 { top: 20%; left: 10%; animation-delay: 0s; }
+.icon2 { top: 50%; left: 80%; animation-delay: 4s; }
+.icon3 { top: 75%; left: 30%; animation-delay: 2s; }
+.icon4 { top: 10%; left: 60%; animation-delay: 6s; }
+
+@keyframes floatIcon {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+  }
+}
+
+/* =======================
+   🩺 Daily Tip Smooth Fade Animation
+======================= */
+.daily-tip {
+  background: rgba(255, 255, 255, 0.9);
+  border-left: 6px solid #00aaff;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  max-width: 800px;
+  font-size: 1rem;
+  font-style: italic;
+  color: #222;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 170, 255, 0.15);
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  min-height: 60px;
+}
+
+.daily-tip.visible {
+  opacity: 1;
+}
+
+body.dark .daily-tip {
+  background: rgba(34, 34, 34, 0.85);
+  color: #eee;
+  border-left-color: #00aaff;
+  box-shadow: 0 2px 12px rgba(0, 170, 255, 0.1);
+}
+
+
+
+/* === BMI RESULT STYLES === */
+.fade-in {
+  animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.bmi-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.dark .bmi-box {
+  background: rgba(0, 0, 0, 0.4);
+  border-color: #666;
+}
+
+.tip {
+  font-size: 0.85rem;
+  color: var(--primary);
+  display: block;
+  margin-top: 0.5rem;
+}
+
+
+/* =======================
+   ✨ Glow & Pulse on Hover for Primary Button
+======================= */
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.4), 0 0 20px rgba(0, 170, 255, 0.2);
+    transform: scale(1.05);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.6), 0 0 30px rgba(0, 170, 255, 0.3);
+    transform: scale(1.07);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.4), 0 0 20px rgba(0, 170, 255, 0.2);
+    transform: scale(1.05);
+  }
+}
+
+.primary-btn:hover {
+  animation: glowPulse 1.5s infinite ease-in-out;
+}
+
+
+/* =======================
+   🔗 Footer Social Icons
+======================= */
+.footer-socials {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.footer-socials h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.footer-socials .social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.footer-socials .social-icons a {
+  font-size: 18px;
+  color: #00aaff;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.4s ease;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.footer-socials .social-icons a i {
+  font-size: 20px;
+  transition: transform 0.4s ease;
+}
+
+.footer-socials .social-icons a:hover i {
+  transform: rotate(15deg) scale(1.2);
+  animation: bounceSpin 0.6s ease;
+}
+
+.footer-socials .social-icons a:hover {
+  color: #007acc;
+  text-shadow: 0 0 10px rgba(0, 170, 255, 0.6);
+}
+
+/* 🌑 Dark Mode Styles */
+body.dark .footer-socials {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark .footer-socials h3,
+body.dark .footer-credit {
+  color: #f4f4f4;
+}
+
+body.dark .footer-socials .social-icons a {
+  color: #4ade80;
+}
+
+body.dark .footer-socials .social-icons a:hover {
+  color: #22c55e;
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
+}
+
+/* 🔁 Bounce + Spin animation */
+@keyframes bounceSpin {
+  0%   { transform: scale(1) rotate(0); }
+  25%  { transform: scale(1.2) rotate(15deg); }
+  50%  { transform: scale(0.95) rotate(-10deg); }
+  75%  { transform: scale(1.05) rotate(10deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+
+.footer-credit {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 10px;
+}

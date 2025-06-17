@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Meal Planner</title>
+  <link rel="stylesheet" href="style/style.css" />
+
+  <!-- ✅ Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  
+  <style>
+    /* ✅ Add fade animation for daily tip */
+    #dailyTip {
+      font-size: 1.2rem;
+      opacity: 0;
+      transition: opacity 1s ease;
+      text-align: center;
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+
+    #dailyTip.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🆕 Floating Background Icons -->
+  <div class="floating-icons">
+    <span class="icon icon1">🍎</span>
+    <span class="icon icon2">🥦</span>
+    <span class="icon icon3">🧠</span>
+    <span class="icon icon4">🍞</span>
+  </div>
+
+  <!-- ===================== Navbar ===================== -->
+  <header class="navbar">
+    <div class="logo">
+      <span>🥗 Nutri Mind</span>
+    </div>
+    <nav class="navbar-right">
+      <a href="#">🏠 Home</a>
+      <a href="#features">✨ Features</a>
+      <a href="#how-it-works">⚙️ How It Works</a>
+      <a href="#testimonials">💬 Testimonials</a>
+      <a href="bmi.html">BMI Calculator</a>
+      <a href="dashboard.html">📊 Dashboard</a>
+      <a href="#about">ℹ️ About</a>
+      <button id="login-btn" class="cta">Login</button>
+      <span id="dark-mode-toggle">🌙</span>
+    </nav>
+  </header>
+
+  <!-- ===================== Hero Section ===================== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Eat Smart, Live Better</h1>
+      <p>Your personalized AI-powered meal planner</p>
+    <div class="daily-tip" id="dailyTip">
+  💧 Stay hydrated! Drink at least 8 glasses of water daily.
+    </div>
+    <a href="select-plan.html" class="primary-btn">Generate Meal Plan</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="assets/float2.jpeg" alt="Meal" class="floating-meal"/>
+    </div>
+  </section>
+
+
+  <!-- ===================== Features ===================== -->
+  <section class="features" id="features">
+    <h2>Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <img src="assets/meal.png" alt="Meals Icon" class="feature-icon">
+        <h3>🍽️ Personalized Meals</h3>
+        <p>Get meals tailored to your health goals, dietary needs, and taste preferences using AI suggestions.</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="assets/kcal.png" alt="Calories Icon" class="feature-icon">
+        <h3>💪 Track Calories</h3>
+        <p>Monitor your daily intake and stay on track with your fitness or weight goals effortlessly.</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="assets/ai meal.png" alt="AI Icon" class="feature-icon">
+        <h3>🧠 AI Suggestions</h3>
+        <p>Let our smart engine analyze your inputs and recommend optimal meal combinations every day.</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="assets/calendar.png" alt="Calendar Icon" class="feature-icon">
+        <h3>📅 Weekly Plans</h3>
+        <p>Plan your meals for the entire week with a balanced nutritional approach and minimal repetition.</p>
+      </div>
+    </div>
+  </section>
+
+
+<!-- ===================== How It Works ===================== -->
+<section class="how-it-works" id="how-it-works">
+  <h2 class="section-title">How It Works</h2>
+  <div class="how-steps card-container">
+    <div class="how-card">
+      <i class="fas fa-sliders-h how-icon"></i>
+      <h3>Choose Preferences</h3>
+      <p>Select your dietary needs, taste preferences, and health goals to personalize your journey.</p>
+    </div>
+    <div class="how-card">
+      <i class="fas fa-robot how-icon"></i>
+      <h3>AI Generates Meals</h3>
+      <p>Advanced AI creates nutritious and tasty meal plans tailored to your preferences.</p>
+    </div>
+    <div class="how-card">
+      <i class="fas fa-chart-line how-icon"></i>
+      <h3>Track & Save</h3>
+      <p>Track calories, progress, and save your favorite meal plans for reuse.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ===================== Testimonials ===================== -->
+  <section id="testimonials" class="testimonials">
+    <h2 class="section-title">What Users Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <p>"This planner helped me eat healthier without stress. AI suggestions are always on point!"</p>
+        <h4>— Priya S., Nutrition Enthusiast</h4>
+      </div>
+
+      <div class="testimonial-card">
+        <p>"Perfect for busy professionals. I just input my goals and get meals I love every week."</p>
+        <h4>— Rohan K., Software Engineer</h4>
+      </div>
+
+      <div class="testimonial-card">
+        <p>"Tracking calories has never been easier. Plus, the interface is beautiful and intuitive!"</p>
+        <h4>— Meera T., Fitness Coach</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== About ===================== -->
+  <section id="about" class="about">
+    <h2 class="section-title">About AI Meal Planner</h2>
+    <div class="about-content">
+      <p>
+        AI Meal Planner is your intelligent assistant for crafting personalized, balanced, and delicious meal plans. Our mission is to make healthy eating effortless for everyone.
+      </p>
+      <p>
+        Powered by advanced AI and nutrition science, we help you align your food with your fitness, lifestyle, and preferences—no more guesswork, just smart eating.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== Login Modal ===================== -->
+  <div id="login-modal" class="login-modal hidden">
+    <div class="login-card">
+      <span class="close-btn" id="close-login">&times;</span>
+      <h2>Login</h2>
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button class="primary-btn">Sign In</button>
+
+      <div class="dark-mode-toggle-container">
+        <label for="modal-dark-toggle">🌙</label>
+        <input type="checkbox" id="modal-dark-toggle" />
+      </div>
+
+      <p style="margin-top: 20px; text-align: center;">
+        Don't have an account?
+        <button id="open-register" style="color: #4ade80; background: none; border: none; cursor: pointer; text-decoration: underline;">
+          Register
+        </button>
+      </p>
+    </div>
+  </div>
+
+  <!-- ===================== Register Modal ===================== -->
+  <div id="register-modal" class="login-modal hidden">
+    <div class="login-card">
+      <span class="close-btn" id="close-register">&times;</span>
+      <h2>Register</h2>
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button class="primary-btn">Create Account</button>
+
+      <div class="dark-mode-toggle-container">
+        <label for="modal-dark-toggle-register">🌙</label>
+        <input type="checkbox" id="modal-dark-toggle-register" />
+      </div>
+
+      <p style="margin-top: 20px; text-align: center;">
+        Already have an account?
+        <button id="back-to-login" style="color: #4ade80; background: none; border: none; cursor: pointer; text-decoration: underline;">
+          Login
+        </button>
+      </p>
+    </div>
+  </div>
+
+  <!-- ===================== Script ===================== -->
+<script>
+  const tips = [
+    "🥗 Eat a variety of colorful fruits and vegetables.",
+    "🚶‍♂️ Walk at least 30 minutes every day.",
+    "🧘‍♀️ Practice mindfulness or meditation for 10 mins.",
+    "🍎 Avoid processed foods and sugary drinks.",
+    "😴 Get at least 7-8 hours of sleep every night.",
+    "🏋️‍♀️ Do light exercise to stay active and boost mood."
+  ];
+
+  let currentTip = 0;
+  const tipElement = document.getElementById("dailyTip");
+
+  function rotateTip() {
+    tipElement.classList.remove("visible");
+
+    setTimeout(() => {
+      currentTip = (currentTip + 1) % tips.length;
+      tipElement.innerText = tips[currentTip];
+      tipElement.classList.add("visible");
+    }, 500);
+  }
+
+  tipElement.classList.add("visible");
+  setInterval(rotateTip, 5000);
+</script>
+
+<script src="assets/script.js"></script>
+
+<!-- ===================== Footer / Socials ===================== -->
+<footer class="footer-socials">
+  <h3>Follow Us</h3>
+  <div class="social-icons">
+    <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="#" target="_blank"><i class="fab fa-x-twitter"></i> Twitter</a>
+    <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+    <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="#" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+  </div>
+  <p class="footer-credit">© 2025 Nutri Mind. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
