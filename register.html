@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | Nutri Mind</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+  <div class="login-modal show">
+    <div class="login-card">
+
+      <span class="close-btn" onclick="window.history.back()">×</span>
+      <h2>Register</h2>
+
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button class="primary-btn">Create Account</button>
+
+      <!-- 🌗 Dark Mode Toggle for Card ---->
+      <div class="dark-mode-toggle-container">
+        <label for="modal-dark-toggle-register">🌙</label>
+        <input type="checkbox" id="modal-dark-toggle-register" />
+      </div>
+
+      <p style="margin-top: 20px; text-align: center;">
+        Already have an account?
+        <a href="login.html" style="color: #4ade80;">Login</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Toggle dark mode for the card only
+    document.getElementById("modal-dark-toggle-register").addEventListener("change", function () {
+      document.querySelector(".login-card").classList.toggle("dark-mode", this.checked);
+    });
+  </script>
+</body>
+</html>
