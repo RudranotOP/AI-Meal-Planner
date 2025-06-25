@@ -85,3 +85,4 @@ if (modalRegisterToggle) {
     registerCard.classList.toggle("dark-mode");
   });
 }
+
